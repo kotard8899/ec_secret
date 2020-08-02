@@ -1,0 +1,333 @@
+@mixin pad{
+  @media(max-width: 768px){
+    @content
+  }
+};
+@mixin phone{
+  @media(max-width: 375px){
+    @content
+  }
+};
+
+.ls-2{
+  letter-spacing: 2px;
+}
+a{
+  text-decoration: none !important;
+}
+.nav-link.active{
+  color: #fff;
+  background-image: url();
+}
+.card-btn{
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border-width: 1.5px;
+  padding-left: 11px;
+}
+.br-2{
+  border-radius: 2px;
+}
+.br-3{
+  border-radius: 3px;
+}
+.goods-card{
+  .card-img-cus{
+    height: 250px;
+  }
+  &:hover{
+    .card-img-cus{
+      position: relative;
+      .card-blur{
+        background-color: rgba( #fff, .2);
+        z-index: 1;
+      }
+    }
+  }
+}
+.cus-list-group{
+  a{
+    display: block;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-family: Impact;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    &:hover{
+      color: $gray;
+    }
+    &.active,&:focus{
+      background-color: #fff;
+      color: $primary;
+    }
+  }
+}
+.mi-big{
+  font-size: 5rem;
+}
+.hr-white{
+  height: 1px;
+  background-color: #fff;
+  width: 100%;
+}
+.detail-img{
+  height: 600px;
+  @include pad{
+    height: 400px;
+  }
+}
+.carts-img{
+  height: 150px;
+  width: 150px;
+  &:focus,&.active{
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+.cal-btns{
+  display: flex;
+  align-items: center;
+  button{
+    border-radius: 0;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    font-weight: bold;
+    outline: 0;
+    &:hover,&:focus{
+      color: #fff;
+      box-shadow: none;
+    }
+    span{
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  input{
+    outline: none;
+    padding-bottom: 10px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  button,input{
+    height: 50px;
+    width: 50px;
+    color: white;
+    border: 0;
+  }
+}
+.del-btn{
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  &:hover{
+    color: $danger;
+  }
+  &:focus{
+    box-shadow: none;
+    outline: none;
+  }
+}
+.coupon-group{
+  input:focus,button:focus{
+    box-shadow: none;
+    border: 1px solid #ced4da;
+  }
+}
+.checkout-form{
+  color: white;
+  input,textarea{
+    border-radius: 0;
+    outline: none;
+    border: none;
+    &:focus{
+      box-shadow: none;
+      border: none;
+      outline: none;
+    }
+  }
+  textarea{
+    resize:none
+    }
+  label{
+    font-size: 1.3rem;
+    font-weight: 300;
+    span{
+      font-size: 1rem;
+    }
+  }
+}
+.checkout-img{
+  height: 60px;
+  width: 60px;
+}
+.bl{
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+.progress-step{
+  .progress-dot{
+    position: relative;
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 50%;
+    z-index: 5;
+    margin-bottom: 5px;
+  }
+  .progress-text{
+    color: #fff;
+  }
+  .on-step{
+    &:before{
+      background-color: $accent !important;
+    }
+    .progress-dot{
+      background-color: $accent;
+    }
+    .progress-text{
+      color: $accent;
+    }
+  }
+  .off-step{
+    &:before{
+      background-color: $accent !important;
+    }
+    &:after{
+      background-color: $accent !important;
+    }
+    .progress-dot{
+      background-color: $accent;
+    }
+    .progress-text{
+      color: $gray;
+    }
+  }
+  .step-1{
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 6.5px;
+      left: 53%;
+      width: 49%;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+  .step-2{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 6.5px;
+      left: 0;
+      width: 49%;
+      height: 2px;
+      background-color: #fff;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      top: 6.5px;
+      left: 52%;
+      width: 49%;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+  .step-3{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 6.5px;
+      left: 0;
+      width: 49%;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+}
+.btn-back{
+  background-color: transparent;
+  color: $accent;
+  padding: 0;
+  &:hover{
+    color: darken($color: $accent, $amount: 5%);
+  }
+  span{
+    padding-top: 1px;
+  }
+}
+.pay-form{
+  th,td{
+    color: white;
+  }
+}
+.about{
+  .bg-cover-jum{
+    background-size: cover;
+    background-position: center 15%;
+    height:500px;
+    img{
+      width: 400px;
+    }
+    @include pad{
+      background-position: center 5%;
+      height: 400px;
+      img{
+        width: 330px;
+      }
+    }
+    @include phone{
+      height: 250px;
+      img{
+        width: 250px;
+      }
+    }
+  }
+  .about-title{
+    font-size: 70px;
+    line-height: 108px;
+    letter-spacing: .02em;
+    font-weight: 500;
+    color: #fff;
+    @include phone{
+      font-size: 50px;
+    }
+  }
+  .about-text{
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    letter-spacing: 5px;
+    font-size: 19px;
+    @include phone{
+      font-size: 15px;
+    }
+    span{
+      color: #e06666;
+    }
+  }
+}
+.cellection-bg{
+  width: 100%;
+  height: 400px;
+}
+.bg-cover-bot{
+  background-size: cover;
+  background-position: center bottom;
+}
+.btn-detail{
+  width: 200px;
+  height: 50px;
+}
