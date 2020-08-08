@@ -316,20 +316,6 @@
     font-size: 1.7rem;
     letter-spacing: 4px;
   }
-  .image-wrap{
-    height: 261px;
-    position: relative;
-    display: flex;
-    text-decoration: none;
-    margin-bottom: 15px;
-    .rectangle-image{
-      position: absolute;
-      right: 0px;
-      left: 0px;
-      top: 0px;
-      bottom: 0px;
-    }
-  }
   .bs-name{
     text-decoration: none;
     font-size: 1.3rem;
@@ -346,4 +332,41 @@
     font-size: 1rem;
     font-weight: 300;
   }
+}
+
+.image-wrap{
+  height: 261px;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 15px;
+  .rectangle-image{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+}
+.detail-name {
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  color: #fff;
+}
+.detail-price {
+  padding-right: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.detail-origin-price {
+  color: #6c757d;
+  font-size: .8rem;
+}
+.text-about {
+  color: #e06666!important;
+}
+.lh-30 {
+  line-height: 30px;
 }
