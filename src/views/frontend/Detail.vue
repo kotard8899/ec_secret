@@ -86,6 +86,7 @@ export default {
       productId: '',
     };
   },
+  inject: ['reload'],
   methods: {
     ...mapActions(['getProducts']),
     getProduct(id) {
@@ -106,6 +107,7 @@ export default {
       }
     },
     toDetail(id) {
+      this.reload();
       this.$router.push(`/detail/${id}`);
     },
   },

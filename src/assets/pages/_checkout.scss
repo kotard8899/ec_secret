@@ -1,0 +1,27 @@
+.checkout-form{
+  color: white;
+  input,textarea{
+    border-radius: 0;
+    outline: none;
+    border: none;
+    &:focus{
+      box-shadow: none;
+      border: none;
+      outline: none;
+    }
+  }
+  textarea{
+    resize:none
+    }
+  label{
+    font-size: 1.3rem;
+    font-weight: 300;
+    span{
+      font-size: 1rem;
+    }
+  }
+}
+.checkout-img{
+  height: 60px;
+  width: 60px;
+}

@@ -1,0 +1,93 @@
+.about{
+  .bg-cover-jum{
+    background-size: cover;
+    background-position: center 15%;
+    height:500px;
+    img{
+      width: 400px;
+    }
+    @include pad{
+      background-position: center 5%;
+      height: 400px;
+      img{
+        width: 330px;
+      }
+    }
+    @include phone{
+      height: 250px;
+      img{
+        width: 250px;
+      }
+    }
+  }
+  .about-title{
+    font-size: 70px;
+    line-height: 108px;
+    letter-spacing: .02em;
+    font-weight: 500;
+    color: #fff;
+    @include phone{
+      font-size: 50px;
+    }
+  }
+  .about-text{
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    letter-spacing: 5px;
+    font-size: 19px;
+    @include phone{
+      font-size: 15px;
+    }
+    span{
+      color: #e06666;
+    }
+  }
+}
+.accent-line {
+  height: 2px;
+  background-color: #6dd7bb;
+  width: 45px;
+  margin-bottom: 20px;
+}
+.guarantee{
+  .text {
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+}
+.team{
+  .thum {
+    width: 350px;
+    height: 250px;
+    position: relative;
+    &:before {
+      left: 0;
+      top: 0;
+      border-width: 25px 25px 0 0;
+      border-color: #000 transparent transparent transparent;
+    }
+    &:after {
+      right: 0;
+      bottom: 0;
+      border-width: 0 0 25px 25px;
+      border-color: transparent transparent #000 transparent;
+    }
+    &:before,&:after{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      z-index: 1;
+    }
+    .name {
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+  }
+}

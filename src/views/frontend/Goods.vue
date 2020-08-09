@@ -13,7 +13,7 @@
             <a href="#" class=""
             @click.prevent="searchText = '名人'"
             :class="{'active':searchText === '名人'}">
-              名人特區
+              明星特區
             </a>
             <a href="#" class=""
             @click.prevent="searchText = '凡人'"

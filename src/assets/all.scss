@@ -2,8 +2,12 @@
 @import "~bootstrap/scss/functions";
 @import "/helpers/variables";
 @import "~bootstrap/scss/bootstrap";
-
+@import "/layout/grid";
 @import "/helpers/dashboard";
 @import "/helpers/custom";
 @import "/layout/header";
+@import "/layout/footer";
 @import "/pages/home";
+@import "/pages/about";
+@import "/pages/checkout";
+@import "/pages/goods";

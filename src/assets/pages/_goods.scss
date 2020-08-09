@@ -1,0 +1,14 @@
+.goods-card{
+  .card-img-cus{
+    height: 250px;
+  }
+  &:hover{
+    .card-img-cus{
+      position: relative;
+      .card-blur{
+        background-color: rgba( #fff, .2);
+        z-index: 1;
+      }
+    }
+  }
+}

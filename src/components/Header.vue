@@ -30,7 +30,7 @@
             <router-link class="nav-link h5 font-weight-light m-0 py-3" to="/goods">
               全部商品</router-link>
             <router-link to="/celebrities" class="nav-link h5 font-weight-light m-0 py-3">
-              名人特區
+              明星特區
             </router-link>
             <router-link class="nav-link h5 font-weight-light m-0 py-3" to="/muggles">
             無聊的人</router-link>

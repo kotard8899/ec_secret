@@ -11,6 +11,7 @@ export default new Vuex.Store({
   state: {
     cartOrder: [],
     isLoading: false,
+    isDisabled: false,
     carts: {
       carts: [],
     },
@@ -63,17 +64,23 @@ export default new Vuex.Store({
         qty,
       };
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_CUSTOMPATH}/cart`;
-      axios.post(api, { data: cart }).then((response) => {
-        if (response.data.success) {
-          context.commit('LOADINGID', '');
-          context.commit('RUNGIF', id);
-          setTimeout(() => {
-            context.commit('RUNGIF', '');
-          }, 1500);
-          $('#productModal').modal('hide');
-          this.dispatch('getCarts');
-        }
-      });
+      if (!this.state.isDisabled) {
+        context.commit('ISDISABLED', true);
+        axios.post(api, { data: cart }).then((response) => {
+          if (response.data.success) {
+            context.commit('LOADINGID', '');
+            context.commit('RUNGIF', id);
+            setTimeout(() => {
+              context.commit('RUNGIF', '');
+            }, 1500);
+            setTimeout(() => {
+              context.commit('ISDISABLED', false);
+            }, 2000);
+            $('#productModal').modal('hide');
+            this.dispatch('getCarts');
+          }
+        });
+      }
     },
     getCarts(context) {
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_CUSTOMPATH}/cart`;
@@ -133,6 +140,9 @@ export default new Vuex.Store({
     LOADING(state, payload) {
       state.isLoading = payload;
     },
+    ISDISABLED(state, payload) {
+      state.isDisabled = payload;
+    },
     PRODUCTS(state, payload) {
       state.products = payload;
     },
@@ -154,6 +164,7 @@ export default new Vuex.Store({
   },
   getters: {
     isLoading: (state) => state.isLoading,
+    isDisabled: (state) => state.isDisabled,
     runGif: (state) => state.status.runGif,
     products: (state) => state.products,
     product: (state) => state.product,

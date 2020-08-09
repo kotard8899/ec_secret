@@ -41,7 +41,7 @@
         </template>
       </div>
     </div>
-    <section class="about-us text-center text-white bg-primary pb-4">
+    <section class="about-us text-center text-white bg-primary pb-5">
       <h4 class="font-weight-lighter">想知道喜歡的名星住哪嗎 ?</h4>
       <p class="mb-0 text-secondary font-weight-light">
         SECRET有你想要的東西
@@ -84,34 +84,34 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div class="h2 in-sec-title">INTERVIEWS</div>
+            <div class="h2 in-sec-title">採訪記事</div>
             <div class="row">
               <a href="#" class="col-md-6 in-sm no-gutters-md">
                 <div class="img-sm bg-cover" style="background-image: url(https://images.unsplash.com/photo-1585261941984-0145bb423997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);">
                   <div class="in-arrow d-none"><i class="fas fa-chevron-right fa-3x"></i></div>
                 </div>
-                <div class="in-title my-3">Information Security</div>
+                <div class="in-title my-3">資訊安全</div>
                 <div class="in-context">七種方式：有效的解決個資外洩的問題</div>
               </a>
               <a href="#" class="col-md-6 in-sm no-gutters-md">
                 <div class="img-sm bg-cover" style="background-image: url(https://images.unsplash.com/photo-1528545027322-5e3b3f441730?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2595&q=80);">
                   <div class="in-arrow d-none"><i class="fas fa-chevron-right fa-3x"></i></div>
                 </div>
-                <div class="in-title my-3">Information Security</div>
+                <div class="in-title my-3">資訊安全</div>
                 <div class="in-context">SECRET 完成24億元D輪融資，總募資金額逼近50億元！</div>
               </a>
               <a href="#" class="col-md-6 in-sm no-gutters-md">
                 <div class="img-sm bg-cover" style="background-image: url(https://images.unsplash.com/photo-1575157951566-b6f6e1f51ca6?ixlib=rb-1.2.1&auto=format&fit=crop&w=820&q=80);">
                   <div class="in-arrow d-none"><i class="fas fa-chevron-right fa-3x"></i></div>
                 </div>
-                <div class="in-title my-3">Information Security</div>
+                <div class="in-title my-3">資訊安全</div>
                 <div class="in-context">SECRET 被認證：台灣最有潛力獨角獸？</div>
               </a>
               <a href="#" class="col-md-6 in-sm no-gutters-md">
                 <div class="img-sm bg-cover" style="background-image: url(https://images.unsplash.com/photo-1509993630589-dbfcf726c21d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);">
                   <div class="in-arrow d-none"><i class="fas fa-chevron-right fa-3x"></i></div>
                 </div>
-                <div class="in-title my-3">Information Security</div>
+                <div class="in-title my-3">資訊安全</div>
                 <div class="in-context">瑞幸：你喝的不是咖啡，是資本的眼淚</div>
               </a>
             </div>
@@ -134,7 +134,7 @@
         </div>
       </div>
     </section>
-    <section class="best-seller bg-primary">
+    <section class="best-seller bg-primary pb-4">
       <div class="container">
         <div class="bs-title font-weight-light text-white text-center py-4">熱門暢銷商品</div>
         <div class="row">

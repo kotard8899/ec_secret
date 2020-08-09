@@ -1,10 +1,18 @@
 <template>
   <div class="bg-dark pt-5">
     <Loading :active.sync="isLoading"></Loading>
-    <div class="container">
-      <div class="row">
+    <div class="container py-auto">
+      <div v-if="carts.carts.length === 0" class="row justify-content-center
+      text-center py-auto my-5">
+        <div class="col-md-6">
+          <h2 class="text-white pb-5">您的購物車內沒有商品</h2>
+          <a href="#/goods" class="btn btn-outline-accent btn-lg rounded-0 px-5 py-2 ls-2">
+            繼續購物
+          </a>
+        </div>
+      </div>
+      <div v-else class="row">
         <div class="col-md-8 text-white">
-          <h2 v-if="carts.carts.length === 0">您還沒買東西 滾</h2>
           <div class="pb-4 pt-2" v-for="item in carts.carts" :key="item.id">
             <div class="row justify-content-around pb-3 align-items-center">
               <div class="col-6 col-md-4 col-lg-3">

@@ -2,7 +2,7 @@
   <div class="bg-dark">
     <Loading :active.sync="isLoading"></Loading>
     <div class="bg-cover cellection-bg d-flex align-items-center justify-content-center mb-5" style="background-image:url(https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
-    <h2 class="display-4 text-white font-weight-normal ls-2">名人特區</h2>
+    <h2 class="display-4 text-white font-weight-normal ls-2">明星特區</h2>
     </div>
     <div class="container">
       <div class="row">
