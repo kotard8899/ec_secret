@@ -46,7 +46,8 @@
       </div>
       <router-link class="d-none d-md-block nav-link h5 font-weight-light mb-0" to="/carts">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        <small class="badge badge-pill">{{ carts.carts.length }}</small>
+        <small class="badge badge-pill" :class="{'text-transparent': !carts.carts.length}">
+          {{ carts.carts.length }}</small>
       </router-link>
     </nav>
   </div>

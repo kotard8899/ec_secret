@@ -102,11 +102,30 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-white border-0 py-4 rounded-0">
+            <h5 class="modal-title text-beauty ls-2">您已付款成功！</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-footer border-0 bg-white rounded-0">
+            <router-link to="/goods" class="w-100 btn btn-accent rounded-0 py-3 px-5 ls-2"
+            data-dismiss="modal">
+              繼續購物
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
+import $ from 'jquery';
 
 export default {
   name: 'Payment',
@@ -119,6 +138,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['getCarts']),
     getOrder() {
       const vm = this;
       const api = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_CUSTOMPATH}/order/${vm.orderId}`;
@@ -137,6 +157,8 @@ export default {
       vm.$http.post(api).then((response) => {
         if (response.data.success) {
           vm.getOrder();
+          $('#myModal').modal('show');
+          this.getCarts();
         }
         vm.$store.dispatch('updateLoading', false);
       });
@@ -150,7 +172,7 @@ export default {
     window.scrollTo(0, 0);
   },
   computed: {
-    ...mapGetters(['isLoading']),
+    ...mapGetters(['isLoading, carts']),
   },
 };
 </script>

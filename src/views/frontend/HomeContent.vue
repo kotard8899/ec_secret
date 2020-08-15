@@ -56,7 +56,7 @@
     </section>
     <section class="row no-gutters rectangle-section">
       <router-link to="/celebrities" href="#" class="col-md-4 rectangle-image-wrap" >
-        <span class="rectangle-text">名人特區</span>
+        <span class="rectangle-text">明星特區</span>
         <div class="border-line"></div>
         <span class="rectangle-en-text">CELEBRITIES</span>
         <button type="button" class="btn btn-light rounded-0 rec-btn">MORE</button>
@@ -191,6 +191,9 @@ export default {
   },
   created() {
     this.getProducts();
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   },
 };
 </script>
