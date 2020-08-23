@@ -19,7 +19,7 @@ export default {
     logout() {
       const vm = this;
       const api = `${process.env.VUE_APP_API}logout`;
-      this.$http.post(api).then((response) => {
+      vm.$http.post(api).then((response) => {
         if (response.data.success) {
           vm.$router.push('/login');
         }

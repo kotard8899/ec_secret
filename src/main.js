@@ -23,3 +23,21 @@ new Vue({
   store,
   render: (h) => h(App),
 }).$mount('#app');
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth) {
+    const vm = this;
+    const api = `${process.env.VUE_APP_API}api/user/check`;
+    axios.$http.post(api, vm.user).then((response) => {
+      if (response.data.success) {
+        next();
+      } else {
+        next({
+          path: '/login',
+        });
+      }
+    });
+  } else {
+    next();
+  }
+});

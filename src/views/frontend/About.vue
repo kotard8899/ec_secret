@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="thum bg-cover img-fluid mx-auto" style="background-image: url(https://images.unsplash.com/photo-1565260524775-7e9b536fba2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);}">
+            <div class="thum bg-cover img-fluid mx-auto" style="background-image: url(https://images.unsplash.com/photo-1565260524775-7e9b536fba2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
               <span class="name">MURASAKI NO UE</span>
             </div>
             <div class="body mb-5 pt-2">
@@ -101,7 +101,7 @@
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="thum bg-cover img-fluid mx-auto" style="background-image: url(https://images.unsplash.com/photo-1578489758854-f134a358f08b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);}">
+            <div class="thum bg-cover img-fluid mx-auto" style="background-image: url(https://images.unsplash.com/photo-1578489758854-f134a358f08b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
               <span class="name">HANACHIRU SATO</span>
             </div>
             <div class="body mb-5 pt-2">

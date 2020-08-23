@@ -1,12 +1,11 @@
 .ls-2{
   letter-spacing: 2px;
 }
-a{
-  text-decoration: none !important;
+a:hover{
+  text-decoration: none;
 }
 .nav-link.active{
   color: #fff;
-  background-image: url();
 }
 .card-btn{
   width: 42px;
