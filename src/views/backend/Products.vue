@@ -84,8 +84,6 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="category">分類</label>
-                    <!-- <input type="text" class="form-control" id="category"
-                      placeholder="請輸入分類" v-model="tempProduct.category"> -->
                       <select  class="form-control" id="category"
                       placeholder="請輸入分類" v-model="tempProduct.category">
                       <option value="名人">名人</option>

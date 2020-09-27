@@ -18,7 +18,7 @@ import Sidebar from '@/components/Sidebar.vue';
 import Alert from '@/components/AlertMessage.vue';
 
 export default {
-  name: 'Dashboard',
+  name: '',
   components: {
     Navbar,
     Sidebar,
