@@ -124,16 +124,22 @@ export default new Vuex.Store({
         product_id: originProductId,
         qty: newQty,
       };
-      axios
-        .all([axios.delete(delAPI), axios.post(addAPI, { data: changeCart })])
-        .then(axios.spread(() => {
-          context.commit('LOADINGID', '');
-          context.commit('RUNGIF', originProductId);
-          setTimeout(() => {
-            context.commit('RUNGIF', '');
-          }, 1500);
-          this.dispatch('getCarts');
-        }));
+      if (!this.state.isDisabled) {
+        context.commit('ISDISABLED', true);
+        axios
+          .all([axios.delete(delAPI), axios.post(addAPI, { data: changeCart })])
+          .then(axios.spread(() => {
+            context.commit('LOADINGID', '');
+            context.commit('RUNGIF', originProductId);
+            setTimeout(() => {
+              context.commit('RUNGIF', '');
+            }, 1500);
+            setTimeout(() => {
+              context.commit('ISDISABLED', false);
+            }, 2000);
+            this.dispatch('getCarts');
+          }));
+      }
     },
   },
   mutations: {
